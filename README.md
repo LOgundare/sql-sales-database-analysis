@@ -8,7 +8,7 @@ A normalized sales database designed for learning and practicing SQL in a real-w
 
 ## Dataset Source
 
-The dataset consists of 1,194 sales records, including customer names, product categories, profits, and locations across U.S. states.
+The dataset is a clean csv with no missing values. It consists of 1,194 sales records, including customer names, product categories, profits, and locations across U.S. states. Raw dataset can be found [here](./data/sales_dataset.csv).  
 
 ⸻
 
@@ -52,7 +52,7 @@ To recreate setup:
 - Clone the repository
 - Open DBeaver and connect to your database
 - Run the `CREATE TABLE` scripts provided
-- Import the CSV into the appropriate tables
+- The raw dataset is located in `/data/sales_dataset.csv`. Import the CSV into the appropriate tables using DBeaver's data import tool. 
 - Run queries from sample SQL file or notebook
 
 ⸻
