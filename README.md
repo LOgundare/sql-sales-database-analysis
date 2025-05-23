@@ -49,11 +49,11 @@ To reduce redundancy and improve structure, performance, and maintainability, st
 ## Setup Instructions
 
 To recreate setup:
-	1.	Clone the repository
-	2.	Open DBeaver and connect to your database
-	3.	Run the `CREATE TABLE` scripts provided
-	4.	Import the CSV into the appropriate tables
-	5.	Run queries from sample SQL file or notebook
+- Clone the repository
+- Open DBeaver and connect to your database
+- Run the `CREATE TABLE` scripts provided
+- Import the CSV into the appropriate tables
+- Run queries from sample SQL file or notebook
 
 ⸻
 
