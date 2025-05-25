@@ -19,7 +19,6 @@ The dataset is a clean csv with no missing values. It consists of 1,194 sales re
 - `customers` – *Stores customer information*
 - `states` – *Stores U.S. states where orders were placed*
 - `cities` – *Stores cities linked to states*
-- `locations` – *Links orders to specific cities*
 - `products` – *Stores product categories and sub-categories*
 - `orders` – *Stores order-level data (date, customer, location, payment mode)*
 - `order_items` – *Stores line items per order (product, quantity, amount, profit)*
