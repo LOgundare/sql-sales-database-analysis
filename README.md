@@ -184,6 +184,10 @@ To recreate setup:
 
 Ensure PostgreSQL is installed and running. After importing, run the queries listed under ‘Sample Queries’ or your own exploratory SQL.
 
+## SQL Scripts
+- `sql/ecommerce_analysis.sql`: Cotains all KPI queries and business logic
+- `sql/ecommerce_etl_script.sql`: Contains ETL logic to transform raw CSV into a relational model
+
 ## Key Findings: 
 - **Churn Rate**  
   A 100% churn rate was observed between 2023 and 2024, indicating none of the customers who purchased in 2023 returned in 2024.
