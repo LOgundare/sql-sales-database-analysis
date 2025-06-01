@@ -14,17 +14,13 @@
 - [Future Work](#future-work)
 
 ## Overview
-
 A normalized sales database designed for learning and practicing SQL in a real-world analytics context, using data from an online eCommerce business. Initial data profiling was performed in Excel to identify redundancy, groupings, and normalization opportunities before designing the relational schema in SQL. This project demonstrates the process of normalizing a raw sales dataset and building a relational database to support SQL-based business analysis. The dataset comes from an online U.S. eCommerce business.
 
 ## Dataset Source
-
 The dataset is a clean csv with no missing values. It consists of 1,194 sales records, including customer names, product categories, profits, and locations across U.S. states. Raw dataset can be found [here](./data/sales_dataset.csv).  
 
 ## Database Schema
-
 ### Tables
-
 - `customers` – *Stores customer information*
 - `states` – *Stores U.S. states where orders were placed*
 - `cities` – *Stores cities linked to states*
@@ -32,17 +28,16 @@ The dataset is a clean csv with no missing values. It consists of 1,194 sales re
 - `orders` – *Stores order-level data (date, customer, location, payment mode)*
 - `order_items` – *Stores line items per order (product, quantity, amount, profit)*
 
-## Relationships
-
+### Relationships
 - Each **order** references a **customer** and a **city**.
 - Each **order item** references an **order** and a **product**.
 - Each **city** references a **state**.
 
-## Normalization Rationale
+### Normalization Rationale
 
 To reduce redundancy and improve structure, performance, and maintainability, state and city data were moved into normalized tables using integer keys to ensure better data integrity and efficiency.
 
-## Schema Definition (SQL)
+### Schema Definition (SQL)
 ```sql
 CREATE TABLE public.sales_raw (
 	"Order ID" varchar NULL,
@@ -106,17 +101,20 @@ CREATE TABLE public.order_items (
 );
 ```
 
-## Data Quality Issue
+### 📊 Entity Relationship Diagram (ERD)
+This ERD illustrates the relational structure used in the sales analytics project.
 
+![ERD](/assets/erd.png)
+
+### Data Quality Issue
 During analysis, it was discovered that the Order ID column in the raw dataset was not a reliable unique identifier. Multiple rows shared the same Order ID but had different order dates, customer names and locations. This inconsistency led to inaccurate data mapping and duplication when populating the orders and order_items tables.
 
-### Resolution: 
+#### Resolution: 
 - A surrogate primary key order_uid was introduced in the orders table.
 - Instead of using Order ID, records were matched based on Order Date, Customer Name, City, and Payment Mode.
 - This ensured one-to-one matching and prevented duplicate entries. 
 
 ## Sample Queries
-
 #### 📊 Churn Rate Analysis
 ``` sql
 with
@@ -174,7 +172,6 @@ order by total_profit desc;
 ```
 
 ## Setup Instructions
-
 To recreate setup:
 - Clone the repository
 - Open DBeaver and connect to your database
@@ -229,8 +226,6 @@ Ensure PostgreSQL is installed and running. After importing, run the queries lis
     - *2024*: $1,202,478 in sales, $308,336 in profit  
 
 ## Future Work
-
 What would be added next?
 - Data Visualization
-- Export Entity-Relationship Diagram
  
