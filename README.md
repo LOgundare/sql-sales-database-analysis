@@ -187,7 +187,7 @@ Ensure PostgreSQL is installed and running. After importing, run the queries lis
 
 ## Key Findings: 
 - **Churn Rate**  
-  A 100% churn rate was observed between 2023 and 2024, indicating none of the customers who purchased in 2023 returned in 2024.
+  A 100% churn rate was observed between 2023 and 2024, indicating none of the customers who made purchases in 2023 returned in 2024.
 
 - **Regional Performance**  
   - **Top Performing State**: *Florida*  
